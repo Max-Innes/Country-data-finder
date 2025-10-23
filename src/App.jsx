@@ -1,13 +1,13 @@
 import './App.css'
+import "./Autocomplete.css"
 import { useState } from "react"
+import Autocomplete from './Autocomplete'
 
 function App() {
-  const [query, setQuery] = useState("")
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
 
-  async function handleClick() {
-    const value = query.trim().toLowerCase()
+  async function handleClick(value) {
     console.log("User searched for:", value)
 
     if (!value) {
@@ -37,15 +37,8 @@ function App() {
   return (
     <div>
       <h1>Country Finder</h1>
-
-      <input
-        id="countryName"
-        type="text"
-        placeholder="Enter country name"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={handleClick}>Search</button>
+      <p>Start typing a country in the box below and select from the dropdown menu.</p>
+      <Autocomplete onSelect={handleClick} />
 
       {error && <p style={{ color: "red" }}>{error}</p>}
 
