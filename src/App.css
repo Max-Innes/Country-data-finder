@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size:50px;
+  color: #203648
+}
+
+p {
+  font-style: italic;
+  color: #203648;
+}
+
+input {
+  text-align: center;
+  font-size: 16px;
+  width: 200px; /* box width */
+  height: 30px; /* box height */
+  padding: 10px; /* space inside the box around the text */
+  border: 2px solid #203648; /* thickness and color */
+  border-radius: 10px; /* rounded corners */
+}
+
+button {
+  margin-left: 10px; /* adds space on the left of the button */
+  background-color: lightgrey;
+  color: #203648
+}
+
+img {
+  width: 175px;
+  height: 175px; 
+}
+
+.sidebyside {
+  display: flex; /* puts the three different components side by side */
+  gap: 75px; /* space in between */
+  margin-top: 50px;
+}
