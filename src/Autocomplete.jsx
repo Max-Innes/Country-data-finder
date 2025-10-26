@@ -57,7 +57,7 @@ function Autocomplete({ onSelect }) {
     <div>
       <input
         type="text"
-        placeholder="Seach..."
+        placeholder="Search..."
         value={query}
         onChange={handleChange} //as user types
       />
